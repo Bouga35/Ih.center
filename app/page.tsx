@@ -120,8 +120,15 @@ export default function Home() {
             >
               <h3 className="text-2xl font-semibold mb-6 text-gray-700">Contactez-nous</h3>
               <div className="flex items-start mb-4">
-                <MapPin className="w-6 h-6 mr-3 text-blue-600 flex-shrink-0 mt-1" />
-                <p className="text-lg text-gray-600">Lots al wahda immeuble 515. 2eme étage appart 03 mohammedia</p>
+                   <MapPin className="w-6 h-6 mr-3 text-blue-600 flex-shrink-0 mt-1" />
+                   <a
+                   href="https://www.google.com/maps/place/Lots+al+wahda+immeuble+515.+2eme+étage+appart+03+mohammedia"
+                    target="_blank"
+                   rel="noopener noreferrer"
+                   className="text-lg text-blue-600 hover:underline"
+                    >
+                   Lots al wahda immeuble 515. 2eme étage appart 03 mohammedia
+                </a>
               </div>
               <div className="flex items-center mb-4">
                 <Phone className="w-6 h-6 mr-3 text-blue-600" />
@@ -145,7 +152,7 @@ export default function Home() {
                   Dimanche : Fermé
                 </p>
               </div>
-              <div className="mt-6">
+            <div className="mt-6">
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26589.72859895047!2d-7.4046678!3d33.6835073!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda7b6f11d7e29a5%3A0x9a3d76b2ba1c3662!2sMohammedia%2C%20Morocco!5e0!3m2!1sen!2sus!4v1653438048968!5m2!1sen!2sus"
                   width="100%"
@@ -153,8 +160,7 @@ export default function Home() {
                   style={{ border: 0 }}
                   allowFullScreen={false}
                   loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                >location</iframe>
+                  referrerPolicy="no-referrer-when-downgrade">location</iframe>
               </div>
             </motion.div>
           </div>

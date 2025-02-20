@@ -1,4 +1,6 @@
 import Link from "next/link"
+import { MapPin } from "lucide-react";
+import { Mail } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -36,13 +38,23 @@ export default function Footer() {
           </div>
           <div>
             <h3 className="text-lg font-semibold mb-4">Contact</h3>
-            <p className="text-sm text-gray-300 mb-2">Lots al wahda immeuble 515. 2eme étage appart 03 mohammedia</p>
-            <Link
-              href="mailto:ihcallrecrute@gmail.com"
-              className="text-sm text-gray-300 hover:text-white transition duration-300"
-            >
-              ihcallrecrute@gmail.com
-            </Link>
+            <div className="flex items-start mb-4">
+                   <MapPin className="w-6 h-6 mr-3 text-blue-600 flex-shrink-0 mt-1" />
+                   <a
+                   href="https://www.google.com/maps/place/Lots+al+wahda+immeuble+515.+2eme+étage+appart+03+mohammedia"
+                    target="_blank"
+                   rel="noopener noreferrer"
+                   className="text-lg text-blue-600 hover:underline"
+                    >
+                   Lots al wahda immeuble 515. 2eme étage appart 03 mohammedia
+                </a>
+              </div>
+              <div className="flex items-center mb-4">
+                <Mail className="w-6 h-6 mr-3 text-blue-600" />
+                  <a href="mailto:ihcallrecrute@gmail.com" className="text-lg text-blue-600 hover:underline">
+                    ihcallrecrute@gmail.com
+                     </a>
+                </div>
           </div>
         </div>
         <div className="mt-8 border-t border-gray-700 pt-8 text-center">
