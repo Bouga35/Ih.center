@@ -18,12 +18,15 @@ import {
 import Header from "./components/Header"
 import RecruitmentAnnouncement from "./components/RecruitmentAnnouncement"
 import ImageCarousel from "./components/ImageCarousel"
+import { useScrollToHash } from "./hooks/useScrollToHash"
 
 export default function Home() {
+  useScrollToHash()
+
   return (
     <>
       <Header />
-      <section className="relative min-h-screen">
+      <section id="home" className="relative min-h-screen pt-16">
         <div className="absolute inset-0 z-10">
           <ImageCarousel />
         </div>
@@ -142,6 +145,17 @@ export default function Home() {
                   Dimanche : Fermé
                 </p>
               </div>
+              <div className="mt-6">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26589.72859895047!2d-7.4046678!3d33.6835073!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda7b6f11d7e29a5%3A0x9a3d76b2ba1c3662!2sMohammedia%2C%20Morocco!5e0!3m2!1sen!2sus!4v1653438048968!5m2!1sen!2sus"
+                  width="100%"
+                  height="300"
+                  style={{ border: 0 }}
+                  allowFullScreen={false}
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                >location</iframe>
+              </div>
             </motion.div>
           </div>
         </div>
@@ -165,7 +179,10 @@ export default function Home() {
             >
               <PhoneCall className="w-12 h-12 text-blue-600 mb-4" />
               <h3 className="text-xl font-semibold mb-2">Service client</h3>
-              <p className="text-gray-600">Support client professionnel et réactif pour vos clients.</p>
+              <p className="text-gray-600 mb-4">Support client professionnel et réactif pour vos clients.</p>
+              <Link href="/services/service-client" className="text-blue-600 hover:underline">
+                En savoir plus
+              </Link>
             </motion.div>
             <motion.div
               initial={{ opacity: 0, y: 50 }}
@@ -175,7 +192,10 @@ export default function Home() {
             >
               <HeadsetIcon className="w-12 h-12 text-blue-600 mb-4" />
               <h3 className="text-xl font-semibold mb-2">Support technique</h3>
-              <p className="text-gray-600">Assistance technique experte pour résoudre les problèmes rapidement.</p>
+              <p className="text-gray-600 mb-4">Assistance technique experte pour résoudre les problèmes rapidement.</p>
+              <Link href="/services/support-technique" className="text-blue-600 hover:underline">
+                En savoir plus
+              </Link>
             </motion.div>
             <motion.div
               initial={{ opacity: 0, y: 50 }}
@@ -185,7 +205,10 @@ export default function Home() {
             >
               <BarChartIcon className="w-12 h-12 text-blue-600 mb-4" />
               <h3 className="text-xl font-semibold mb-2">Ventes et marketing</h3>
-              <p className="text-gray-600">Campagnes de vente et de marketing pour développer votre entreprise.</p>
+              <p className="text-gray-600 mb-4">Campagnes de vente et de marketing pour développer votre entreprise.</p>
+              <Link href="/services/ventes-et-marketing" className="text-blue-600 hover:underline">
+                En savoir plus
+              </Link>
             </motion.div>
             <motion.div
               initial={{ opacity: 0, y: 50 }}
@@ -195,12 +218,17 @@ export default function Home() {
             >
               <UsersIcon className="w-12 h-12 text-blue-600 mb-4" />
               <h3 className="text-xl font-semibold mb-2">Gestion de la relation client</h3>
-              <p className="text-gray-600">Solutions CRM personnalisées pour fidéliser vos clients.</p>
+              <p className="text-gray-600 mb-4">Solutions CRM personnalisées pour fidéliser vos clients.</p>
+              <Link href="/services/gestion-relation-client" className="text-blue-600 hover:underline">
+                En savoir plus
+              </Link>
             </motion.div>
           </div>
         </div>
       </section>
-      <RecruitmentAnnouncement />
+      <section id="recruitment">
+        <RecruitmentAnnouncement />
+      </section>
     </>
   )
 }
