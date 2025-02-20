@@ -38,17 +38,19 @@ export default function Footer() {
           </div>
           <div>
             <h3 className="text-lg font-semibold mb-4">Contact</h3>
-            <div className="flex items-start mb-4">
-                   <MapPin className="w-6 h-6 mr-3 text-blue-600 flex-shrink-0 mt-1" />
-                   <a
-                   href="https://www.google.com/maps/place/Lots+al+wahda+immeuble+515.+2eme+étage+appart+03+mohammedia"
-                    target="_blank"
-                   rel="noopener noreferrer"
-                   className="text-lg text-blue-600 hover:underline"
-                    >
-                   Lots al wahda immeuble 515. 2eme étage appart 03 mohammedia
-                </a>
-              </div>
+            <div className="flex items-center mb-4">
+              <a
+                href="https://www.google.com/maps/place/Lots+al+wahda+immeuble+515.+2eme+étage+appart+03+mohammedia"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center text-blue-600 hover:underline"
+              >
+                <MapPin className="w-6 h-6 mr-3 text-blue-600 flex-shrink-0" />
+                <span className="text-lg text-blue-600 hover:underline">
+                  Lots al wahda immeuble 515. 2eme étage appart 03 mohammedia
+                </span>
+              </a>
+            </div>
               <div className="flex items-center mb-4">
                 <Mail className="w-6 h-6 mr-3 text-blue-600" />
                   <a href="mailto:ihcallrecrute@gmail.com" className="text-lg text-blue-600 hover:underline">
